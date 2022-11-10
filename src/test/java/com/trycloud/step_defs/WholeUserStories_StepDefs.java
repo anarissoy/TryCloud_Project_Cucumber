@@ -16,7 +16,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
-public class UserStory6_StepDefs {
+public class WholeUserStories_StepDefs {
 
     BasePage basePage = new BasePage();
     LoginPage loginPage = new LoginPage();

@@ -50,10 +50,10 @@ public class UserStory6Page extends BasePage{
     @FindBy (css= "#uploadprocessbar")
     public WebElement uploadBar;
 
-    @FindBy (xpath = "//tbody[@id='fileList']/tr")  // //tbody[@id="fileList"]/tr
+    @FindBy (xpath = "//tbody[@id='fileList']/tr")
     public List<WebElement> recommendBtn;
 
-    @FindBy (xpath = "//span[@class='nametext']") // (//span[@class='nametext'])[5]
+    @FindBy (xpath = "//span[@class='nametext']")
     public List<WebElement> uploadedFileList;
 
     public List<String> fileCount(){
@@ -91,120 +91,5 @@ public class UserStory6Page extends BasePage{
         System.out.println(before);
         Assert.assertTrue(after.equalsIgnoreCase(verify));
     }
-
-
-    // US7
-
-//    @FindBy (xpath = "//td[@class='filename ui-draggable ui-draggable-handle']")
-//    public List<WebElement> listOfFiles;
-//
-//    public void listOfFiles(){
-//        List<String> list = new ArrayList<>();
-//        for(int i = 1; i < listOfFiles.size(); i++){
-//            list.add(listOfFiles.get(i).getText());
-//            System.out.println(listOfFiles.get(i).getText());
-//        }
-//        Assert.assertTrue(list.contains("JAVA-BAKU"));
-//    }
-//
-//    @FindBy (xpath = "//span[.='New folder']")
-//    public WebElement newFolder;
-//
-//    @FindBy (xpath = "//input[@id='view13-input-folder']")
-//    public WebElement inputFolderName;
-//
-//    @FindBy (xpath = "(//input[@type='submit'])[2]")
-//    public WebElement submitFolderName;
-//
-//    @FindBy (xpath = "//a[@class='filename']")
-//    public WebElement newCreated;
-//
-//    @FindBy (xpath = "//div[@style='background-image:url(/index.php/apps/theming/img/core/filetypes/folder.svg?v=0);']")
-//    public List<WebElement> folderType;
-//
-//    @FindBy (xpath = "//tr[@data-type='file']")
-//    public List<WebElement> fileType;
-//
-//    @FindBy (xpath = "//tr[@data-type='dir']//label")
-//    public List<WebElement> folderCheckBox;
-//
-//    @FindBy (xpath = "//span[@class='innernametext']")
-//    public List<WebElement> filesName;
-//
-//
-//    public void selectFolder(){
-//        for(int i = 0; i < folderType.size(); i++){
-//            if (folderType.get(i).isDisplayed()){
-//                //BrowserUtils.waitFor(1);
-//                folderCheckBox.get(i).click();
-//            }
-//        }
-//    }
-//
-//    public void verifyFileName(List<WebElement> listOfElements, String fileName){
-//        String str = "";
-//        for (WebElement each : listOfElements){
-//            if(each.getText().contains(fileName)){
-//                str += "" + each.getText();
-//                break;
-//            }
-//        }
-//       Assert.assertEquals(fileName,str);
-//    }
-
-    // US8  ********************************************************************
-
-//    public void selectTopModule(String topModules){
-//        String locator = "li[data-id='"+topModules+"'] > a > svg > image";
-//        Driver.getDriver().findElement(By.cssSelector(locator)).click();
-//    }
-//    public void deleteFile(String deleteF){
-//        String a = "ile";
-//        String b = "older";
-//        if(rightClickMenuDelete.getText().contains("Delete folder")){
-//            String locator = "//div[@id='rightClickMenu']/ul/li[6]/a/span/following-sibling::span[.='"+deleteF+b+"']";
-//            Driver.getDriver().findElement(By.xpath(locator)).click();
-//        }
-//        else if (rightClickMenuDelete.getText().contains("Delete files")){
-//            String locator = "//div[@id='rightClickMenu']/ul/li[6]/a/span/following-sibling::span[.='"+deleteF+a+"']";
-//            Driver.getDriver().findElement(By.xpath(locator)).click();
-//        }
-//    }
-//
-//    @FindBy (xpath = "//div[@id='rightClickMenu']/ul/li[6]/a/span/following-sibling::span[starts-with(.,'Delete f')]")
-//    public WebElement rightClickMenuDelete;
-//
-//    @FindBy (xpath = "//a[.='Deleted files']")
-//    public WebElement deletedFiles;
-//
-//
-//    public void deletedFiles(String str){
-//        String locator = "//a[.='"+str+"']";
-//        Driver.getDriver().findElement(By.xpath(locator)).click();
-//    }
-//
-//    @FindBy (xpath = "(//span[@class='innernametext'])[10]")
-//    public WebElement deletedFileName;
-//
-//    public void fileName(){
-//        System.out.println(deletedFileName.getText());
-//    }
-//
-//    @FindBy (xpath = "//span[@class='innernametext']")
-//    public List<WebElement> filesNameInDeletedPage;
-//
-//    public void verifyDeletedFileUS8(){
-//        String deletedFileInDeletedFilesPage = "";
-//        for (WebElement each: filesNameInDeletedPage){
-//            if(each.getText().equalsIgnoreCase(deletedFileName.getText())){
-//                break;
-//            }
-//            deletedFileInDeletedFilesPage += ""+each.getText();
-//        }
-//        Assert.assertEquals(deletedFileName.getText(), deletedFileInDeletedFilesPage);
-//    }
-
-
-
 
 }
