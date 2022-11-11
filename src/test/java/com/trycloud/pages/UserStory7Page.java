@@ -68,16 +68,16 @@ public class UserStory7Page extends BasePage{
         }
     }
 
-    public void verifyFileName(List<WebElement> listOfElements, String fileName){
-        String str = "";
+    public void verifyFileName(List<WebElement> listOfElements, String expected){
+        String actual = "";
         for (WebElement each : listOfElements){
-            if(each.getText().equalsIgnoreCase(fileName)){
-                str += "" + each.getText();
+            if(each.getText().equalsIgnoreCase(expected)){
+                actual += "" + each.getText();
                 break;
             }
         }
-        System.out.println(str);
-        Assert.assertEquals(fileName,str);
+        System.out.println(actual);
+        Assert.assertEquals(expected,actual);
     }
 
     public void verifyUS7tc2(){
