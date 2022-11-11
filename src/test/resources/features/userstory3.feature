@@ -18,7 +18,7 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | Deck      |
 
 
-  @us_03
+  @us_03 @smoke
   Scenario: As a user, I should be access all the main modules of the app.
     When user on the dashboard page
     Then Verify the user see the following modules:
