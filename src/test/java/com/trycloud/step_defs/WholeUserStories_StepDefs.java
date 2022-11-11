@@ -238,13 +238,13 @@ public class WholeUserStories_StepDefs {
     @When("the user uploads a file with the upload file option")
     public void theUserUploadsAFileWithTheUploadFileOption() {
         BrowserUtils.waitFor(1);
-        userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\anaris - Copy (10).txt");
+        userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\anaris - Copy (11).txt");
         BrowserUtils.waitFor(1);
     }
 
     @Then("Verify the file is displayed on the page")
     public void verifyTheFileIsDisplayedOnThePage() {
-        userStory7Page.verifyFileName(userStory7Page.filesName, "anaris - Copy (10)");
+        userStory7Page.verifyFileName(userStory7Page.filesName, "anaris - Copy (11)");
     }
 
     /**
@@ -470,15 +470,14 @@ public class WholeUserStories_StepDefs {
     public void usersSearchAnyExistingFileFolderUserName() {
         String send = "User";
         depot += send;
-        userStory14Page.searchBox.sendKeys("User" + Keys.ENTER);
+        userStory14Page.searchBox.sendKeys(send + Keys.ENTER);
         BrowserUtils.waitFor(2);
     }
 
     @Then("verify the app displays the expected result option")
     public void verifyTheAppDisplaysTheExpectedResultOption() {
-        List<String> actualSearchList = userStory14Page.getSearchList();
-        System.out.println(actualSearchList);
-        Assert.assertTrue(actualSearchList.contains("User"));
+        
+        userStory14Page.getSearchList(depot);
     }
 }
 

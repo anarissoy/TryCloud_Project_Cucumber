@@ -1,6 +1,7 @@
 package com.trycloud.pages;
 
 import com.trycloud.utilities.BrowserUtils;
+import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -19,14 +20,29 @@ public class UserStory14Page extends BasePage{
     @FindBy (xpath = "//div[@id=\"header-menu-unified-search\"]//ul[@aria-label='Conversations']/li")
     public List <WebElement> searchList;
 
-    public List<String> getSearchList(){
-        List<String> setSearchList = new ArrayList<>();
+    public String getSearchList(String verify){
+        //List<String> setSearchList = new ArrayList<>();
+        String set = "";
         for(int i = 0; i<searchList.size()-1; i++){
             BrowserUtils.hover(searchList.get(i));
             BrowserUtils.waitFor(1);
-            setSearchList.add(searchList.get(i).getText());
-            searchList.get(i).isDisplayed();
+            //setSearchList.add(searchList.get(i).getText());
+            set += " " + searchList.get(i).getText();
+            //searchList.get(i).isDisplayed();
         }
-        return setSearchList;
+        System.out.println(set);
+        return set;
     }
+
+//    public void verifySearchList(String result){
+//        List<String> actualSearchList = getSearchList();
+//        String verify = "";
+//        for ( String each: actualSearchList){
+//            if(each.contains(result)){
+//                verify += " "+each;
+//            }
+//        }
+//        System.out.println(verify);
+//        Assert.assertTrue(verify.contains(result));
+//    }
 }
