@@ -1,5 +1,6 @@
 package com.trycloud.pages;
 
+import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
@@ -46,20 +47,22 @@ public class UserStory7Page extends BasePage{
     @FindBy (xpath = "//div[@style='background-image:url(/index.php/apps/theming/img/core/filetypes/folder.svg?v=0);']")
     public List<WebElement> folderType;
 
-    @FindBy (xpath = "//tr[@data-type='file']")
-    public List<WebElement> fileType;
+//    @FindBy (xpath = "//tr[@data-type='file']")
+//    public List<WebElement> fileType;
 
     @FindBy (xpath = "//tr[@data-type='dir']//label")
     public List<WebElement> folderCheckBox;
 
     @FindBy (xpath = "//span[@class='innernametext']")
-    public List<WebElement> filesName;
+    public List<WebElement> fileNameVerify;
+
+    @FindBy (xpath = "//tbody[@id='fileList']/tr")
+    public List<WebElement> fileType;
 
 
     public void selectFolder(){
         for(int i = 0; i < folderType.size(); i++){
             if (folderType.get(i).isDisplayed()){
-                //BrowserUtils.waitFor(1);
                 folderCheckBox.get(i).click();
             }
         }
@@ -68,11 +71,23 @@ public class UserStory7Page extends BasePage{
     public void verifyFileName(List<WebElement> listOfElements, String fileName){
         String str = "";
         for (WebElement each : listOfElements){
-            if(each.getText().contains(fileName)){
+            if(each.getText().equalsIgnoreCase(fileName)){
                 str += "" + each.getText();
                 break;
             }
         }
+        System.out.println(str);
         Assert.assertEquals(fileName,str);
+    }
+
+    public void verifyUS7tc2(){
+        List<WebElement> list2 = new ArrayList<>();
+        for (int i = 1; i < fileType.size(); i++) {
+            BrowserUtils.hover(fileType.get(i));
+            if (fileType.get(i).getAttribute("data-type").equalsIgnoreCase("dir")) {
+                list2.add(fileType.get(i));
+            }
+        }
+        list2.get(1).click();
     }
 }

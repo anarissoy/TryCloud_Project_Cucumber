@@ -12,8 +12,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class WholeUserStories_StepDefs {
@@ -226,26 +228,26 @@ public class WholeUserStories_StepDefs {
      */
     @And("user choose a folder from the page")
     public void userChooseAFolderFromThePage() {
-
-        userStory7Page.selectFolder();
+        userStory7Page.verifyUS7tc2();
     }
 
     @And("user clicks the add icon on the top")
     public void userClicksTheAddIconOnTheTop() {
-
-        BrowserUtils.waitFor(1);
     }
+
+    String expected = "anaris - Copy (9)";
 
     @When("the user uploads a file with the upload file option")
     public void theUserUploadsAFileWithTheUploadFileOption() {
         BrowserUtils.waitFor(1);
-        userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\anaris - Copy (11).txt");
+
+        userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\"+expected+".txt");
         BrowserUtils.waitFor(1);
     }
 
     @Then("Verify the file is displayed on the page")
     public void verifyTheFileIsDisplayedOnThePage() {
-        userStory7Page.verifyFileName(userStory7Page.filesName, "anaris - Copy (11)");
+        userStory7Page.verifyFileName(userStory7Page.fileNameVerify,expected);
     }
 
     /**
