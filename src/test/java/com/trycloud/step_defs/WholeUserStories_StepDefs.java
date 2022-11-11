@@ -83,8 +83,8 @@ public class WholeUserStories_StepDefs {
      */
     @And("user click the top-left checkbox of the table")
     public void userClickTheTopLeftCheckboxOfTheTable() {
-        BrowserUtils.waitFor(4);
-        userStory4Page.checkAllFilesButton.click();
+        BrowserUtils.waitFor(1);
+        userStory4Page.checkAll.click();
     }
 
     @Then("verify all the files are selected")
@@ -147,6 +147,7 @@ public class WholeUserStories_StepDefs {
 
     @When("user click the Favorites sub-module on the left side")
     public void user_click_the_favorites_sub_module_on_the_left_side() {
+        userStory6Page.checkAll.click();
         userStory6Page.favoritesBtn.click();
         BrowserUtils.waitFor(3);
     }

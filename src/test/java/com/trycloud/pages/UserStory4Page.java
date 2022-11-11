@@ -7,16 +7,16 @@ import org.openqa.selenium.support.FindBy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserStory4Page {
+public class UserStory4Page extends BasePage{
 
     @FindBy(xpath = "//div[@class='app-content-list-item-line-one']")
     public List<WebElement> contactNamesElements;
 
+    @FindBy (xpath = "//table[@id='filestable']/thead/tr/th[@id='headerSelection']")
+    public WebElement checkAll;
 
-    @FindBy(xpath = "//label[@for='select_all_files']")
-    public WebElement checkAllFilesButton;
-
-
+    @FindBy (css = "li[data-id='files'] > a > svg > image")
+    public WebElement filesModule;
 
     @FindBy(xpath = "//label[contains(@for,'select-files')]/../input")
     public List<WebElement> checkFileButtons;

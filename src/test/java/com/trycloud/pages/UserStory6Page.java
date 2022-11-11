@@ -36,6 +36,9 @@ public class UserStory6Page extends BasePage{
     @FindBy (xpath = "(//span[@class='nametext'])[1]")
     public WebElement rightClickOnFile;
 
+    @FindBy (xpath = "//table[@id='filestable']/thead/tr/th[@id='headerSelection']")
+    public WebElement checkAll;
+
     //TC2
 
     @FindBy (xpath = "//span[@class='icon icon-add']")
