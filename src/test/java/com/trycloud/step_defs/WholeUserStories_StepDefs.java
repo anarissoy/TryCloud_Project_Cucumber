@@ -476,7 +476,7 @@ public class WholeUserStories_StepDefs {
 
     @Then("verify the app displays the expected result option")
     public void verifyTheAppDisplaysTheExpectedResultOption() {
-        
+
         userStory14Page.getSearchList(depot);
     }
 }
