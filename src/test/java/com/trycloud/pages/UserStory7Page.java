@@ -16,7 +16,7 @@ public class UserStory7Page extends BasePage{
     }
 
 
-    @FindBy (xpath = "//input[@type ='file']")
+    @FindBy (xpath = "//input[@type ='file']")  // id="uploadprogressbar"
     public WebElement inputButton;
 
     @FindBy(xpath = "//td[@class='filename ui-draggable ui-draggable-handle']")

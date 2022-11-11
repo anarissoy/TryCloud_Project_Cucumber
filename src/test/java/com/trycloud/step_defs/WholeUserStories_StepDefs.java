@@ -225,24 +225,26 @@ public class WholeUserStories_StepDefs {
      */
     @And("user choose a folder from the page")
     public void userChooseAFolderFromThePage() {
+
         userStory7Page.selectFolder();
     }
 
     @And("user clicks the add icon on the top")
     public void userClicksTheAddIconOnTheTop() {
+
         BrowserUtils.waitFor(1);
     }
 
     @When("the user uploads a file with the upload file option")
     public void theUserUploadsAFileWithTheUploadFileOption() {
         BrowserUtils.waitFor(1);
-        userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\anaris - Copy (9).txt");
+        userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\anaris - Copy (10).txt");
         BrowserUtils.waitFor(1);
     }
 
     @Then("Verify the file is displayed on the page")
     public void verifyTheFileIsDisplayedOnThePage() {
-        userStory7Page.verifyFileName(userStory7Page.filesName, "anaris - Copy (9)");
+        userStory7Page.verifyFileName(userStory7Page.filesName, "anaris - Copy (10)");
     }
 
     /**
