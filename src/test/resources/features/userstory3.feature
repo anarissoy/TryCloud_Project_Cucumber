@@ -19,8 +19,8 @@ Feature: As a user, I should be accessing all the main modules of the app.
 
 
   @us_03 @smoke
-  Scenario: As a user, I should be access all the main modules of the app.
-    When user on the dashboard page
+  Scenario Outline: As a user, I should be access all the main modules of the app.
+    When user on the dashboard page by using "<username>" and "<password>"
     Then Verify the user see the following modules:
       | Dashboard |
       | Files     |
@@ -31,3 +31,11 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | Circles   |
       | Calendar  |
       | Deck      |
+
+  @multiLogin
+    Examples:
+      | username | password    |
+      | user2    | Userpass123 |
+      | user32   | Userpass123 |
+      | user62   | Userpass123 |
+      | user92   | Userpass123 |

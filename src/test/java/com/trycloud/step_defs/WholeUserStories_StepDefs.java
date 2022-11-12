@@ -63,13 +63,18 @@ public class WholeUserStories_StepDefs {
     /**
      * USER STORY 3 ********************************************************************************
      */
+    @When("user on the dashboard page by using {string} and {string}")
+    public void userOnTheDashboardPageByUsingAnd(String username, String password) {
+        Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.url"));
+        loginPage.login(username,password);
+    }
     @Then("Verify the user see the following modules {string}")
     public void verifyTheUserSeeTheFollowingModules(String modules) {
         userStory3Page.topModules(modules);
 
     }
 
-    // second approach to solve US3
+    // second approach to solve US3 by ADAM
     @Then("Verify the user see the following modules:")
     public void verifyTheUserSeeTheFollowingModules(List<String> expectedModuleNames) {
 
@@ -482,5 +487,6 @@ public class WholeUserStories_StepDefs {
 
         userStory14Page.getSearchList(depot);
     }
+
 }
 
