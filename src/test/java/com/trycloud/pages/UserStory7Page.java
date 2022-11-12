@@ -47,8 +47,6 @@ public class UserStory7Page extends BasePage{
     @FindBy (xpath = "//div[@style='background-image:url(/index.php/apps/theming/img/core/filetypes/folder.svg?v=0);']")
     public List<WebElement> folderType;
 
-//    @FindBy (xpath = "//tr[@data-type='file']")
-//    public List<WebElement> fileType;
 
     @FindBy (xpath = "//tr[@data-type='dir']//label")
     public List<WebElement> folderCheckBox;
@@ -80,7 +78,7 @@ public class UserStory7Page extends BasePage{
         Assert.assertEquals(expected,actual);
     }
 
-    public void verifyUS7tc2(){
+    public void chooseFolder(){
         List<WebElement> list2 = new ArrayList<>();
         for (int i = 1; i < fileType.size(); i++) {
             BrowserUtils.hover(fileType.get(i));

@@ -12,10 +12,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class WholeUserStories_StepDefs {
@@ -149,7 +147,7 @@ public class WholeUserStories_StepDefs {
 
     @When("user click the Favorites sub-module on the left side")
     public void user_click_the_favorites_sub_module_on_the_left_side() {
-        userStory6Page.checkAll.click();
+
         userStory6Page.favoritesBtn.click();
         BrowserUtils.waitFor(3);
     }
@@ -228,7 +226,8 @@ public class WholeUserStories_StepDefs {
      */
     @And("user choose a folder from the page")
     public void userChooseAFolderFromThePage() {
-        userStory7Page.verifyUS7tc2();
+
+        userStory7Page.chooseFolder();
     }
 
     @And("user clicks the add icon on the top")
@@ -251,7 +250,7 @@ public class WholeUserStories_StepDefs {
     }
 
     /**
-     * User Story 8
+     * User Story 8 ********************************************************
      */
     @When("the user clicks the {string} module")
     public void theUserClicksTheModule(String files) {
@@ -275,7 +274,8 @@ public class WholeUserStories_StepDefs {
 
     @When("the user clicks the {string} sub-module on the left side")
     public void theUserClicksTheSubModuleOnTheLeftSide(String deletedFiles) {
-        userStory8Page.deletedFiles.click();
+
+        userStory8Page.deletedFiles(deletedFiles);
     }
 
     @Then("Verify the deleted file is displayed on the page.")

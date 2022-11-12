@@ -60,8 +60,6 @@ public class UserStory6Page extends BasePage{
     public List<WebElement> uploadedFileList;
 
     public List<String> fileCount(){
-        JavascriptExecutor js = ((JavascriptExecutor) Driver.getDriver());
-        //js.executeScript("window.scrollBy(0,1200)");
         int count = 0;
         List<String> fileList = new ArrayList<>();
         for(int i = 0; i< recommendBtn.size(); i++) {

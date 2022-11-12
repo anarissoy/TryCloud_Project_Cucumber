@@ -21,7 +21,6 @@ public class UserStory14Page extends BasePage{
     public List <WebElement> searchList;
 
     public String getSearchList(String verify){
-        //List<String> setSearchList = new ArrayList<>();
         String set = "";
         for(int i = 0; i<searchList.size()-1; i++){
             BrowserUtils.hover(searchList.get(i));
