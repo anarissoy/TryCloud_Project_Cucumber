@@ -36,14 +36,14 @@ public class MyMethods {
         }
     }
 
-    public List<String> countFileByGetAttribute(List<WebElement> webElement){
+    public List<String> countFileByGetAttribute(List<WebElement> webElement, String attribute){
         int count = 0;
         List<String> fileList = new ArrayList<>();
         for(int i = 0; i< webElement.size(); i++) {
             BrowserUtils.hover(webElement.get(i));
             webElement.get(i).isEnabled();
             //count++;
-            fileList.add(webElement.get(i).getAttribute("data-file"));
+            fileList.add(webElement.get(i).getAttribute(attribute));
         }
         return fileList;
     }
