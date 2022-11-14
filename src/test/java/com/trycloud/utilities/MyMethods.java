@@ -1,6 +1,7 @@
 package com.trycloud.utilities;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
@@ -60,4 +61,30 @@ public class MyMethods {
         System.out.println(set);
         return set;
     }
+
+    public int returnNumberFromUsage(WebElement element){
+
+        String[] text = element.getText().split(" ");
+        return Integer.valueOf(text[0]);
+
+    }
+
+    public void selectFromAddIconDropdown(List<WebElement> listOfElement, String string){
+        for (WebElement each: listOfElement){
+            if (each.getText().equalsIgnoreCase(string)){
+                each.click();
+                break;
+            }
+        }
+    }
+
+    public WebElement getModules(String field){
+        String locator = "//input[@type ='"+field+"']";
+        return Driver.getDriver().findElement(By.xpath(locator));
+    }
+
+//    List<WebElement> checkboxes = new ArrayList<>(Arrays.asList(filesPage.showRichWorkspacesCheckbox, filesPage.showRecommendationsCheckbox, filesPage.showHiddenFilesCheckbox));
+//        for (WebElement each : checkboxes) {
+//        Assert.assertTrue(each.isEnabled());
+//    }
 }

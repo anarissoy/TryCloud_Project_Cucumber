@@ -66,6 +66,16 @@ public class UserStory7Page extends BasePage{
         }
     }
 
+    public void clickFolder(){
+        for (WebElement each: fileType){
+            BrowserUtils.hover(each);
+            if(each.getAttribute("data-type").equalsIgnoreCase("dir")){
+                each.click();
+                break;
+            }
+        }
+    }
+
     public void verifyFileName(List<WebElement> listOfElements, String expected){
         String actual = "";
         for (WebElement each : listOfElements){
@@ -78,14 +88,5 @@ public class UserStory7Page extends BasePage{
         Assert.assertEquals(expected,actual);
     }
 
-    public void chooseFolder(){
-        List<WebElement> list2 = new ArrayList<>();
-        for (int i = 1; i < fileType.size(); i++) {
-            BrowserUtils.hover(fileType.get(i));
-            if (fileType.get(i).getAttribute("data-type").equalsIgnoreCase("dir")) {
-                list2.add(fileType.get(i));
-            }
-        }
-        list2.get(1).click();
-    }
+
 }

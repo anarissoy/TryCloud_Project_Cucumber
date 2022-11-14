@@ -32,7 +32,7 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
     Examples:
       | username | password    |
       | user2    | Userpass123 |
-#      | user32   | Userpass123 |
-#      | user62   | Userpass123 |
-#      | user92   | Userpass123 |
+      | user32   | Userpass123 |
+      | user62   | Userpass123 |
+      | user92   | Userpass123 |
 

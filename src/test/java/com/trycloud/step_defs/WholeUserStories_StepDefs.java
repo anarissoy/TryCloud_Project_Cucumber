@@ -12,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
@@ -179,7 +180,7 @@ public class WholeUserStories_StepDefs {
     @And("users uploads file with the “upload file” option")
     public void usersUploadsFileWithTheUploadFileOption() {
         BrowserUtils.waitFor(1);
-        String uploadedFileName = "anaris - Copy (9).txt";
+        String uploadedFileName = "anaris - Copy (10).txt";
         verifyUploadedFileName += uploadedFileName;
         userStory6Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\" + uploadedFileName);
 
@@ -232,14 +233,15 @@ public class WholeUserStories_StepDefs {
     @And("user choose a folder from the page")
     public void userChooseAFolderFromThePage() {
 
-        userStory7Page.chooseFolder();
-    }
+        userStory7Page.clickFolder();
 
+
+    }
     @And("user clicks the add icon on the top")
     public void userClicksTheAddIconOnTheTop() {
     }
 
-    String expected = "anaris - Copy (9)";
+    String expected = "anaris - Copy (4)";
 
     @When("the user uploads a file with the upload file option")
     public void theUserUploadsAFileWithTheUploadFileOption() {
