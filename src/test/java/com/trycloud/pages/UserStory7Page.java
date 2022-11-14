@@ -88,5 +88,21 @@ public class UserStory7Page extends BasePage{
         Assert.assertEquals(expected,actual);
     }
 
+    public void clickNewFolder(String newFolderName){
+        new UserStory6Page().addIconButton.click();
+        newFolder.click();
+        inputFolderName.sendKeys(newFolderName);
+        submitFolderName.click();
+        BrowserUtils.waitFor(1);
+
+        for(WebElement each: fileNameVerify){
+            BrowserUtils.hover(each);
+            if(each.getText().equalsIgnoreCase(newFolderName)){
+                each.click();
+                break;
+            }
+        }
+    }
+
 
 }

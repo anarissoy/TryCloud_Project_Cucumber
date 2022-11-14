@@ -232,23 +232,28 @@ public class WholeUserStories_StepDefs {
      */
     @And("user choose a folder from the page")
     public void userChooseAFolderFromThePage() {
-
         userStory7Page.clickFolder();
-
-
     }
     @And("user clicks the add icon on the top")
     public void userClicksTheAddIconOnTheTop() {
     }
 
-    String expected = "anaris - Copy (4)";
+    String newFolderName = faker.bothify("JAVA-BAKU-###");
+    @And("user choose and click a folder from the page")
+    public void userChooseAndClickAFolderFromThePage() {
+        userStory7Page.clickNewFolder(newFolderName);
+
+    }
+
+    String expected = "anaris - Copy (6)";
 
     @When("the user uploads a file with the upload file option")
     public void theUserUploadsAFileWithTheUploadFileOption() {
         BrowserUtils.waitFor(1);
 
         userStory7Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\"+expected+".txt");
-        BrowserUtils.waitFor(1);
+        BrowserUtils.waitForPageToLoad(5);
+        BrowserUtils.waitFor(2);
     }
 
     @Then("Verify the file is displayed on the page")
@@ -489,6 +494,7 @@ public class WholeUserStories_StepDefs {
 
         userStory14Page.getSearchList(depot);
     }
+
 
 }
 
