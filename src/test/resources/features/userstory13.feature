@@ -1,4 +1,4 @@
-@US13 @smoke
+@US13
 Feature: As a user, I should be able to view the contact list.
 
 

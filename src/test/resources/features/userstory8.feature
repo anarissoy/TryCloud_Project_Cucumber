@@ -1,4 +1,4 @@
-@US8 @smoke
+@US8
 Feature: As a user, I should be able to delete a file/folder.
 
 
