@@ -1,4 +1,4 @@
-@smoke
+@smoker
 Feature:
 
   Background:

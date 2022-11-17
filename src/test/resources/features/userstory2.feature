@@ -1,4 +1,4 @@
-@US2
+@US2 @smoke
 Feature: As a user, I should be able to login to TryCloud app
 
 

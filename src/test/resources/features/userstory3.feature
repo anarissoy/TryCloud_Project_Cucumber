@@ -21,7 +21,7 @@ Feature: As a user, I should be accessing all the main modules of the app.
       | Deck      |
 
 
-  @us_03
+  @us_03 @smoke
   Scenario: As a user, I should be access all the main modules of the app.
     Given user on the dashboard page
     #When user on the dashboard page by using "username" and "password"
