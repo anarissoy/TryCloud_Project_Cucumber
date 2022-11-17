@@ -1,4 +1,4 @@
-@US11
+@US11 @smoke
 Feature: As a user, I should be able to access to Talks module
 
   @US11_TC1

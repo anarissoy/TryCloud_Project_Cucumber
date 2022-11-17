@@ -1,4 +1,4 @@
-@US12
+@US12 @smoke
 Feature: As a user, I should be able to access to Contacts module.
 
 

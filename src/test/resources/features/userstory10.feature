@@ -1,4 +1,4 @@
-@US10
+@US10 @smoke
 Feature: Story: As a user, I should be able to update settings.
 
   @US10_TC1
