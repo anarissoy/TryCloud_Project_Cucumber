@@ -1,22 +1,22 @@
-@US3
+@smoke
 Feature: As a user, I should be accessing all the main modules of the app.
 
-  @US3_1 @smoke
-  Scenario Outline: Verify users accessing all the main modules of the app.
-    Given user on the dashboard page
-    Then Verify the user see the following modules "<Modules>"
-
-    Examples:
-      | Modules   |
-      | Dashboard |
-      | Files     |
-      | Photos    |
-      | Activity  |
-      | Talk      |
-      | Contacts  |
-      | Circles   |
-      | Calendar  |
-      | Deck      |
+#  @US3_1 @smoke
+#  Scenario Outline: Verify users accessing all the main modules of the app.
+#    Given user on the dashboard page
+#    Then Verify the user see the following modules "<Modules>"
+#
+#    Examples:
+#      | Modules   |
+#      | Dashboard |
+#      | Files     |
+#      | Photos    |
+#      | Activity  |
+#      | Talk      |
+#      | Contacts  |
+#      | Circles   |
+#      | Calendar  |
+#      | Deck      |
 
 
   @us_03 @smoke
