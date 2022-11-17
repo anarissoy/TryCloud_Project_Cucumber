@@ -242,7 +242,6 @@ public class WholeUserStories_StepDefs {
     @And("user choose and click a folder from the page")
     public void userChooseAndClickAFolderFromThePage() {
         userStory7Page.clickNewFolder(newFolderName);
-
     }
 
     String expected = "anaris - Copy (6)";

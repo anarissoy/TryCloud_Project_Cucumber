@@ -1,8 +1,9 @@
+@US7 @smoke
 Feature: As a user, I should be able to remove files from the favorites and upload a file directly
   User Story: As a user, I should be able to manage folders.
 
 
-  @US7_TC1 @smoke
+  @US7_TC1
   Scenario Outline: Verify users can add the folder
     Given user is on the login page
     When  user enters "<username>" and "<password>"
@@ -19,7 +20,7 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
 #      | user62   | Userpass123 |
 #      | user92   | Userpass123 |
 
-  @US7_TC2 @smoke
+  @US7_TC2
   Scenario Outline: Verify users can upload a file inside a folder
     Given user is on the login page
     When user enters "<username>" and "<password>"

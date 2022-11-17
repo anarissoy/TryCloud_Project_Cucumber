@@ -1,3 +1,4 @@
+@US12 @smoke
 Feature: As a user, I should be able to access to Contacts module.
 
   @US12
@@ -5,7 +6,7 @@ Feature: As a user, I should be able to access to Contacts module.
     Given user is on the login page
     When  user enters "<username>" and "<password>"
     When the user clicks the "Contacts" module
-    Then verify the page title is "Contacts - Trycloud QA"
+    Then verify the page title is "Contacts - Trycloud"
 
     Examples:
       | username | password    |

@@ -1,3 +1,4 @@
+@US3 @smoke
 Feature: As a user, I should be accessing all the main modules of the app.
 
   @US3

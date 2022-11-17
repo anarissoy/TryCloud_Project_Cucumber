@@ -1,3 +1,4 @@
+@US11 @smoke
 Feature: As a user, I should be able to access to Talks module
 
   @US11_TC1
@@ -5,7 +6,7 @@ Feature: As a user, I should be able to access to Talks module
     Given user is on the login page
     When  user enters "<username>" and "<password>"
     And  the user clicks the Talk module
-    Then verify the page title is "Talk - Trycloud QA"
+    Then verify the page title is "Talk - Trycloud"
 
     Examples:
       | username | password    |
