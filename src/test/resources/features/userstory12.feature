@@ -1,7 +1,7 @@
 @US12 @smoke
 Feature: As a user, I should be able to access to Contacts module.
 
-  @US12
+
   Scenario Outline: verify user access to Contacts module
     Given user is on the login page
     When  user enters "<username>" and "<password>"

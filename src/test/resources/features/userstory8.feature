@@ -1,7 +1,7 @@
 @US8 @smoke
 Feature: As a user, I should be able to delete a file/folder.
 
-  @US8
+
   Scenario Outline: Verify users delete a file/folder
     Given user is on the login page
     When  user enters "<username>" and "<password>"

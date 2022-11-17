@@ -3,7 +3,7 @@ Feature: As a user, I should be able to search any item/ users from the homepage
 
 # Assertion Error
 
-  @US14
+
   Scenario Outline:Verify users can search any files/folder/users from the search box.
     Given user enters "<username>" and "<password>" and launched the dashboard page
     When the user clicks the magnifier icon on the right top

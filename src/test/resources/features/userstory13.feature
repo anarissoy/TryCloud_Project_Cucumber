@@ -2,7 +2,7 @@
 Feature: As a user, I should be able to view the contact list.
 
 
-  @US13
+
   Scenario Outline: verify users can see all the contact names on the contact list
     Given user is on the login page
     When  user enters "<username>" and "<password>"

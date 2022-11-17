@@ -1,7 +1,7 @@
 @US9 @smoke
 Feature: As a user, I should be able to write comments to files/folders.
 
-  @US9
+
   Scenario Outline: Verify users can add the folder
     Given user is on the login page
     When  user enters "<username>" and "<password>"
