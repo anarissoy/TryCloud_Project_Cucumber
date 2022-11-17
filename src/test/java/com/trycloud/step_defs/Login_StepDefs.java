@@ -1,6 +1,7 @@
 package com.trycloud.step_defs;
 
 import com.trycloud.pages.LoginPage;
+import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -33,10 +34,12 @@ public class Login_StepDefs {
     public void userOnTheDashboardPage() {
         Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.url"));
         loginPage.login(ConfigurationReader.getProperty("user2"),ConfigurationReader.getProperty("password"));
+        BrowserUtils.waitForPageToLoad(20);
     }
     @Given("user enters {string} and {string} and launched the dashboard page")
     public void userEntersAndAndLaunchedTheDashboardPage(String username, String password) {
         Driver.getDriver().get(ConfigurationReader.getProperty("trycloud.url"));
         loginPage.login(username,password);
+        BrowserUtils.waitForPageToLoad(20);
     }
 }

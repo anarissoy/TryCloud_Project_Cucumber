@@ -38,7 +38,7 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
       | user92   | Userpass123 |
 
 
-  @US7tc2 @smoke
+  @US7tc2
   Scenario Outline: Verify users can upload a file inside a folder
     Given user is on the login page
     When user enters "<username>" and "<password>"
