@@ -1,4 +1,4 @@
-@US4 @smoke
+@US4
 Feature: As a user, I should be able to access to Files module.
 
   @US4_TC1
