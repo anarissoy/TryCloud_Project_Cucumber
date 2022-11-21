@@ -20,6 +20,7 @@ public class Login_StepDefs {
     @When("user use username and password and login")
     public void user_use_username_and_password_and_login() {
         loginPage.login(ConfigurationReader.getProperty("user2"),ConfigurationReader.getProperty("password"));
+        BrowserUtils.waitForPageToLoad(20);
     }
     @Then("verify the user should be at the dashboard page")
     public void verify_the_user_should_be_at_the_dashboard_page() {
@@ -28,6 +29,7 @@ public class Login_StepDefs {
     @When("user use {string} and {string} and login")
     public void userUseAndAndLogin(String username, String password) {
         loginPage.login(username,password);
+        BrowserUtils.waitForPageToLoad(20);
     }
 
     @Given("user on the dashboard page")
