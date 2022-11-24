@@ -1,5 +1,5 @@
 @US12 @smoke
-Feature: As a user, I should be able to access to Contacts module.
+Feature: US12 - As a user, I should be able to access to Contacts module.
 
 
   Scenario Outline: verify user access to Contacts module

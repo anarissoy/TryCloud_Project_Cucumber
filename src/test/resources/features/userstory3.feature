@@ -1,5 +1,5 @@
 
-Feature: As a user, I should be accessing all the main modules of the app.
+Feature: US3 - As a user, I should be accessing all the main modules of the app.
 
 
 
@@ -22,7 +22,7 @@ Feature: As a user, I should be accessing all the main modules of the app.
 
 
   @us_03 @smoke
-  Scenario: As a user, I should be access all the main modules of the app.
+  Scenario: US3 - As a user, I should be access all the main modules of the app.
     Given user on the dashboard page
     #When user on the dashboard page by using "username" and "password"
     Then Verify the user see the following modules:

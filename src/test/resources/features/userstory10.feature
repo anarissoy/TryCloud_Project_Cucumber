@@ -1,5 +1,5 @@
 @US10 @smoke
-Feature: Story: As a user, I should be able to update settings.
+Feature: US10 - Story: As a user, I should be able to update settings.
 
   @US10_TC1
   Scenario Outline: Verify users update settings

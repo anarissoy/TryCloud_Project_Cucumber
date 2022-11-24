@@ -1,5 +1,5 @@
 @US13 @smoke
-Feature: As a user, I should be able to view the contact list.
+Feature: US13 - As a user, I should be able to view the contact list.
 
 
 

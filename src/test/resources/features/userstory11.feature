@@ -1,5 +1,5 @@
 @US11 @smoke
-Feature: As a user, I should be able to access to Talks module
+Feature: US11 - As a user, I should be able to access to Talks module
 
   @US11_TC1
   Scenario Outline: Verify users update settings
