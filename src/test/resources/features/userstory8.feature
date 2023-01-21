@@ -1,4 +1,4 @@
-@US8
+@US8 @smoke @regression
 Feature: As a user, I should be able to delete a file/folder.
 
 

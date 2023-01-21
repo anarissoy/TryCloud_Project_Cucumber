@@ -1,4 +1,4 @@
-@US13 @smoke
+@US13 @smoke @regression
 Feature: US13 - As a user, I should be able to view the contact list.
 
 

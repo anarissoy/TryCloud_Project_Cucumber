@@ -1,4 +1,4 @@
-@US4
+@US4 @smoke @regression
 Feature: As a user, I should be able to access to Files module.
 
   @US4_TC1

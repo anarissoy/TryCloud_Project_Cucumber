@@ -1,4 +1,4 @@
-@US10 @smoke
+@US10 @smoke @regression
 Feature: US10 - Story: As a user, I should be able to update settings.
 
   @US10_TC1

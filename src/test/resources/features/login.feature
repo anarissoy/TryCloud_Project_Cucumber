@@ -1,4 +1,4 @@
-@smoker
+@smoker @smoke @regression
 Feature:
 
   Background:

@@ -1,4 +1,4 @@
-@US11 @smoke
+@US11 @smoke @regression
 Feature: US11 - As a user, I should be able to access to Talks module
 
   @US11_TC1

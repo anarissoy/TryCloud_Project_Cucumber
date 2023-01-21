@@ -1,4 +1,4 @@
-@US14 @smoke
+@US14 @smoke @regression
 Feature: US14 - As a user, I should be able to search any item/ users from the homepage.
 
 # Assertion Error

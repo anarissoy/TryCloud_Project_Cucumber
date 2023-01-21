@@ -364,10 +364,12 @@ public class WholeUserStories_StepDefs {
         before += a;
     }
 
+    String uploadedFileName;
     @And("user uploads file with the upload file option")
     public void userUploadsFileWithTheUploadFileOption() {
         BrowserUtils.waitFor(1);
-        userStory6Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\Java - Copy (7).jpg");
+        uploadedFileName = "Java - Copy (7).jpg";
+        userStory6Page.inputButton.sendKeys("C:\\Users\\TRIADA\\Desktop\\CYDEO\\case\\" + uploadedFileName);
         BrowserUtils.waitFor(3);
     }
 
@@ -377,6 +379,10 @@ public class WholeUserStories_StepDefs {
         BrowserUtils.waitFor(3);
         String b = userStory10Page.checkStorage.getText();
         after += b;
+
+        userStory10Page.deleteFile(uploadedFileName);
+
+
     }
 
     @Then("the user should be able to see storage usage is increased")

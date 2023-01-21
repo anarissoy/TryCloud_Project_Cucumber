@@ -1,4 +1,4 @@
-@US12 @smoke
+@US12 @smoke @regression
 Feature: US12 - As a user, I should be able to access to Contacts module.
 
 

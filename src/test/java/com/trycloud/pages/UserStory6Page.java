@@ -5,6 +5,7 @@ import com.trycloud.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.ArrayList;
@@ -59,6 +60,9 @@ public class UserStory6Page extends BasePage{
     @FindBy (xpath = "//span[@class='nametext']")
     public List<WebElement> uploadedFileList;
 
+    @FindBy (xpath = "//*[@id='rightClickMenu']/ul/li[6]")
+    public WebElement deleteContextMenu;
+
     public List<String> fileCount(){
         int count = 0;
         List<String> fileList = new ArrayList<>();
@@ -72,6 +76,7 @@ public class UserStory6Page extends BasePage{
     }
 
     public void verifyUS8TC2(String verify){
+        Actions actions = new Actions(Driver.getDriver());
         JavascriptExecutor js = ((JavascriptExecutor) Driver.getDriver());
         js.executeScript("window.scrollBy(0,1000)");
         String after = "";
@@ -85,12 +90,18 @@ public class UserStory6Page extends BasePage{
             count++;
             if(recommendBtn.get(i).getAttribute("data-file").equals(verify)){
                 after += recommendBtn.get(i).getAttribute("data-file");
+                actions.contextClick(recommendBtn.get(i)).perform();
+                BrowserUtils.waitFor(1);
+                deleteContextMenu.click();
+                BrowserUtils.waitFor(1);
                 break;
             }
         }
         System.out.println(count);
         System.out.println(before);
         Assert.assertTrue(after.equalsIgnoreCase(verify));
+
     }
+
 
 }
