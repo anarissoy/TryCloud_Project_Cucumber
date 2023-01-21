@@ -1,9 +1,17 @@
 package com.trycloud.utilities;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -81,6 +89,53 @@ public class MyMethods {
     public WebElement getModules(String field){
         String locator = "//input[@type ='"+field+"']";
         return Driver.getDriver().findElement(By.xpath(locator));
+    }
+
+    public static void getDownloadedFile(String fileName) {
+        File fileLocation = new File("/Users/seraytugcu/Downloads/");
+        System.out.println(fileLocation);
+        File[] Allfile = fileLocation.listFiles();
+        assert Allfile != null;
+        for (File file : Allfile) {
+            if (file.getName().equals(fileName)) {
+                System.out.println("Downloaded");
+            }
+        }
+    }
+    public static void takeScreenShot(String testName) throws IOException {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String timeFormat = DateTimeFormatter.ofPattern("MMM-dd-yyyy_HH-mm").format(localDateTime);
+        TakesScreenshot screenshot = ((TakesScreenshot) Driver.getDriver());
+        File file = screenshot.getScreenshotAs(OutputType.FILE);
+        File destination = new File(testName + "_" + timeFormat + ".png");
+        FileUtils.copyFile(file, destination);
+    }
+
+
+    public String verifyDownloadedFile(String fileName){
+        File fileLocation = new File("C:\\Users\\TRIADA\\Downloads");
+        File[] files = fileLocation.listFiles();
+
+        for (File file : files) {
+            if (file.getName().equals(fileName)) {
+                return file.getName();
+            }
+        }
+        return null;
+    }
+
+
+    public void hoverImages(List<WebElement> element) {
+        Actions actions = new Actions(Driver.getDriver());
+        int i = 1;
+        String s;
+        for (WebElement each : element) {
+            actions.moveToElement(each).build().perform();
+            s = Driver.getDriver().findElement(By.xpath("(//div[@class='figcaption']/h5)[" + i + "]")).getText();
+            i++;
+            System.out.println(s);
+        }
+
     }
 
 //    List<WebElement> checkboxes = new ArrayList<>(Arrays.asList(filesPage.showRichWorkspacesCheckbox, filesPage.showRecommendationsCheckbox, filesPage.showHiddenFilesCheckbox));
